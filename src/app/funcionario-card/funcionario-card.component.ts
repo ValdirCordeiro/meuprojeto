@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-funcionario-card',
   templateUrl: './funcionario-card.component.html',
-  //styleUrls: ['./funcionario-card.component.css']
+  // styleUrls: ['./funcionario-card.component.css']
   styles: [`
     .card-block {
       text-transform: uppercase;
@@ -13,6 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FuncionarioCardComponent {
 
+  // tslint:disable-next-line:no-input-rename
   @Input('obj') funcionario: any;
 
  // getClassesCss(){
@@ -23,10 +24,10 @@ export class FuncionarioCardComponent {
    return this.funcionario.nome.startsWith('V');
  }
 
-  getEstilosCartao(){
+  getEstilosCartao() {
     return {
       'border-width.px' : this.funcionario.id,
-      backgroundColor: this.funcionario.id % 2 === 0 ? 
+      backgroundColor: this.funcionario.id % 2 === 0 ?
       'lightblue' : 'lightgreen'
     };
   }
